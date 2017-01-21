@@ -2,11 +2,11 @@ var db = new PouchDB('http://localhost:5984/toDoList');
 
 window.onload = function () {
 	baseUpdate();
-}
+};
 
 function addRowToBase(inputJs, counter) {
 	if (inputJs === '') {
-		console.log('Pole nie może być puste!')
+		console.log('Pole nie może być puste!');
 	} else {
 		var doc = {
 		  "_id": "row-" +counter,
@@ -43,7 +43,7 @@ function isNotDone(colId) {
 
 
 function deleteRowBase(jsId) {
-	console.log('Zadanie usunięte z bazy danych!')
+	console.log('Zadanie usunięte z bazy danych!');
 	var rowId = $(jsId).attr('id');
 	db.get('row-'+rowId).then(function (doc) {
   	doc._deleted = true;
@@ -65,6 +65,6 @@ function baseUpdate() {
 					updateToDo(row,job,isDone);
 					updateCounter(row);
 			}
-		} else console.log('Zakończono update bazy - baza pusta')
-	})
+		} else console.log('Zakończono update bazy - baza pusta');
+	});
 }

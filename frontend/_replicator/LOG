@@ -1,0 +1,5 @@
+2017/01/21-20:08:20.017 e0c Recovering log #9
+2017/01/21-20:08:20.017 e0c Level-0 table #11: started
+2017/01/21-20:08:20.025 e0c Level-0 table #11: 298 bytes OK
+2017/01/21-20:08:20.032 e0c Delete type=0 #9
+2017/01/21-20:08:20.033 e0c Delete type=3 #7

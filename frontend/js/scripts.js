@@ -2,9 +2,9 @@ var jsPlus = document.getElementById('plus-icon');
 var counter = 0;
 var inputJsField = document.getElementById('text-input');
 jsPlus.addEventListener('click', addRow);
-inputJsField.addEventListener("keyup", function(event) {
+inputJsField.addEventListener('keyup', function(event) {
     event.preventDefault();
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
         addRow() 
     }
 });
@@ -23,6 +23,7 @@ function addRow() {
 			addRowToBase(inputJs, counter);
 			counter++;
 			$(line1 + line2 + line3 + line4 + line5).insertAfter('.main-row');
+			$('#text-input').val('');
 		}	
 }
 
